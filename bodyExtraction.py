@@ -35,7 +35,7 @@ if __name__ == '__main__':
     for file in os.scandir(inputFolder):
         count += 1
         if count % 100 == 0 and count != 0:
-            print("Extracted " + str(count) + "body texts so far")
+            print("Extracted " + str(count) + " body texts so far")
         bodyExtract(file, outputFolder)
     end = time.time()
     print("The time of execution was ", end-start, "seconds")
