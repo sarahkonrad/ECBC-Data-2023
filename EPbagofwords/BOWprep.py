@@ -29,9 +29,16 @@ def readandConvert(file, outputFolder):
     return lowerFile
 
 if __name__ == '__main__':
+    count = 0
     inputFolder = input("Enter what folder of files need to be converted: ")
     outputFolder = input("Enter folder for converted files: ")
+    start = time.time()
     for file in os.scandir(inputFolder):
+        count += 1
+        if count % 100 == 0 and count != 0:
+            print(count " files prepared for BOW so far")
         readandConvert(file, outputFolder)
+    end = time.time()
+    print ("Time of execution was ", end-start, " seconds.")
 
 
