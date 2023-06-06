@@ -5,10 +5,12 @@ The spreadsheet this was read off of was EP_availabletexts_1590-1639"""
 
 import csv
 
+#checks if a keyword is inside a string
 def stringSearch(inputString, keyword):
     if keyword in inputString.lower():
         return True
     return False
+#returns keywords, number of texts containing, relevant TCP IDS
 def readEPcsv(inputFile, inputWords):
     relevantIDs = []
     #for some reason the code would not work without the following line
