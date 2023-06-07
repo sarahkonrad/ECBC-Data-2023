@@ -106,6 +106,7 @@ def getLemmaDict(path):
     lemmaDict = ast.literal_eval(data)
     print(type(lemmaDict))
     return lemmaDict
+
 def readandConvert(file, outputFolder):
     # takes text.py cleaned (initially VEP processed) texts and returns them in BOW format
     lemmaDict = getLemmaDict(r"C:\Users\sarah\Downloads\lemmas.txt")
