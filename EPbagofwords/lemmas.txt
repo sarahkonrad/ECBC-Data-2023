@@ -501,7 +501,7 @@
 'mournfull':'mournful',
 'corne':'corn',
 'vnthankful':'unthankful', 'vnthankfvl':'unthankful',
-'spanyards':'spaniards'
+'spanyards':'spaniards',
 'prouidence':'providence',
 'feare':'fear',
 'vvant':'want', 'uuant':'want',
