@@ -590,22 +590,21 @@
 'aduenteurs':'adventurers',
 'malitous':'malicious',
 'colonizatio':'colonization',
-'sauagenesse':'savageness'
-'incuiiluitie':'incivility'
-'conuersion':'conversion'
+'sauagenesse':'savageness',
+'incuiiluitie':'incivility',
+'conuersion':'conversion',
 'diuellish':'devilish',
 'common-vvealth':'commonwealth', 'common-wealth':'commonwealth', 'common-uuealth':'commonwealth',
-'murthered':'murdered'
-'bloudy':'bloody'
-'bruitish':'brutish'
-'ciuill':'civil', 'ciuilitie':'civil'
-'infidell':'infidel'
-'saluation':'salvation'
-'dieurs';:'diverse'
+'murthered':'murdered',
+'bloudy':'bloody',
+'bruitish':'brutish',
+'ciuill':'civil', 'ciuilitie':'civil',
+'infidell':'infidel',
+'saluation':'salvation',
+'dieurs':'diverse',
 'deuill':'devil',
 'frech':'french',
 'wating':'waiting',
-'me':'men',
 'coutry':'country',
 'sloathfull':'slothful',
 'plating':'planting',
@@ -613,7 +612,7 @@
 'companie':'company',
 'aphalchen':'appalachian',
 'infidell':'infidel',
-'chast':'chaste'
+'chast':'chaste',
 'catichisme':'catechism',
 'maiestie':'majesty', 'majestie':'majesty', 'naiestie':'majesty',
 'iuda':'judah', 'iudah':'judah', 'juda':'judah',
@@ -628,9 +627,9 @@
 'roanoack':'roanoke', 'roanoacke':'roanoke', 'roanock':'roanoke', 'roanoak':'roanoke',
 'salvage':'savage', 'sauage':'savage', 'saluage':'savage',
 'po^hatan':'powhatan',
-'natiues':'natives'
-'croatan':'croatoan'
-'plimouth':'plymouth'
+'natiues':'natives',
+'croatan':'croatoan',
+'plimouth':'plymouth',
 'elohym':'elohim', 'elo^ym':'elohim',
 'gould':'gold',
 'siluer':'silver',
@@ -643,10 +642,10 @@
 'ouen':'oven',
 'woodd':'wood',
 'vanitie':'vanity'
-'levvd':'lewd', 'leuud':'lewd'
+'levvd':'lewd', 'leuud':'lewd',
 'serue':'serve',
 'firre':'fire',
-'reccyued':'recieved'
+'reccyued':'recieved',
 'haynous':'heinous',
 'w^eather':'weather',
 'raynie':'rainy',
@@ -655,10 +654,10 @@
 'magazin':'magazine',
 'ambassadour':'ambassador',
 'a kinne':'akin',
-'riuer':'river'
+'riuer':'river',
 'oyle':'oil', 'oile':'oil',
 'vnprosperous':'unprosperous',
 'heroicke':'heroic',
 'adulterie':'adultery',
-'qveene':'queen', 'qveen':'queen',
+'qveene':'queen', 'qveen':'queen'
 }
