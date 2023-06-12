@@ -546,7 +546,7 @@
 'publique':'public',
 'priuate':'private',
 'monopolie':'monopoly',
-'quantitie':'quantity'
+'quantitie':'quantity',
 'forraine':'foreign',
 'vaine':'vain',
 'blinde':'blind',
