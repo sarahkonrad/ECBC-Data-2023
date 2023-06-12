@@ -641,7 +641,7 @@
 'iudge':'judge',
 'ouen':'oven',
 'woodd':'wood',
-'vanitie':'vanity'
+'vanitie':'vanity',
 'levvd':'lewd', 'leuud':'lewd',
 'serue':'serve',
 'firre':'fire',
