@@ -493,7 +493,7 @@
 'tortoyse':'tortoise',
 'aduenturer':'adventurer',
 'worke':'work', 'woorke':'work',
-'vp':'up',*
+'vp':'up',
 'beane':'bean',
 'fowle':'fowl',
 'ayre':'air',
@@ -617,8 +617,7 @@
 'catichisme':'catechism',
 'maiestie':'majesty', 'majestie':'majesty', 'naiestie':'majesty',
 'iuda':'judah', 'iudah':'judah', 'juda':'judah',
-'yf':'if', *
-'germane':'german',
+'yf':'if',
 'romane':'roman',
 'voyce':'voice',
 'pokahontas':'pocahontas',
