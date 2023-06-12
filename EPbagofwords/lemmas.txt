@@ -588,7 +588,7 @@
 'ralegh':'raleigh', 'rawleigh':'raleigh', 'raligh':'raleigh',
 'elizabetz':'elizabeth',
 'aduenteurs':'adventurers',
-'malitous':'malicous',
+'malitous':'malicious',
 'colonizatio':'colonization',
 'sauagenesse':'savageness'
 'incuiiluitie':'incivility'
