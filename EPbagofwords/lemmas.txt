@@ -390,8 +390,7 @@
 'seuerall':'several', 'severall':'several',
 'honourable':'honorable', 'honovrable':'honorable',
 'honour':'honor',
-'beene':'been'
-'b’:'by',
+'beene':'been',
 'inhabitantes':'inhabitants',
 'imploied':'employed', 'imployed':'employed',
 'countrey':'country', 'contrey':'country', 'countrie':'country',
