@@ -601,7 +601,7 @@
 'ciuill':'civil', 'ciuilitie':'civil'
 'infidell':'infidel'
 'saluation':'salvation'
-'dieurs;:'diverse'
+'dieurs';:'diverse'
 'deuill':'devil',
 'frech':'french',
 'wating':'waiting',
