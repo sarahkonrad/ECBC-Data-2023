@@ -381,7 +381,7 @@
 'briefe':'brief',
 'spirituall':'spiritual', 'spiritval':'spiritual',
 'new found':'newfound',
-'naturall':'natural'
+'naturall':'natural',
 'eere':'year', 'yeare':'year',
 'twelue':'twelve',
 'soule':'soul',
