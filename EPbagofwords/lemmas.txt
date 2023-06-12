@@ -587,7 +587,7 @@
 'iustice':'justice',
 'ralegh':'raleigh', 'rawleigh':'raleigh', 'raligh':'raleigh',
 'elizabetz':'elizabeth',
-'aduenteurs':'adventurers'
+'aduenteurs':'adventurers',
 'malitous':'malicous',
 'colonizatio':'colonization',
 'sauagenesse':'savageness'
