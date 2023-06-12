@@ -372,7 +372,7 @@
     'germanyes':'germany','corea':'korea','corean':'korean','rvssia':'russia',
     'prvssia':'prussia','prussians':'prussian','barselona':'barcelona',
     'spaniards':'spaniard','spaniardes':'spaniard','spaniarde':'spaniard',
-    'spanyard':'spaniard','spanyardes':'spaniard','spanyards':'spaniard',
+    'spanyard':'spaniard','spanyardes':'spaniard','spanyards':'spaniard', 'spanyarde': 'spaniard',
     'venitians':'venetian','venitian':'venetian','venetia':'venice',
     'venisia':'venice','mahumet':'muhammad','mohammad':'muhammad',
     'mohometans':'muhammadan','muhametan':'muhammadan','mohmetan':'muhammad',
