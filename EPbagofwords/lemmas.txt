@@ -434,7 +434,7 @@
 'spaine':'spain',
 'owne':'own',
 'priestes':'priests',
-'prieste':'priest', 'preest':'priest'
+'prieste':'priest', 'preest':'priest',
 'bogges':'bogs',
 'bogge':'bog',
 'desarts':'deserts',
