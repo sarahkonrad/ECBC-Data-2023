@@ -1,4 +1,7 @@
 """data+ 2022
+MUST BE USED ON VEP PRE-PROCESSED TEXTS (avoids the pesky dots and gives
+ASCII carets instead) 
+
 this is an adapted version of the file text.py from the 2022 data+
 github. the functions are unchanged, but the order of their calls
 has been manipulated for our purposes.
