@@ -1292,7 +1292,7 @@
 'merchandize':'merchandise',
 'catholike':'catholic', 'catholik':'catholic', 'catholique':'catholic', 'catholicism':'catholic', 'catholics':'catholic',
 'barbarous':'barbaric', 'barbarism':'barbaric', 'barbarians':'barbaric', 'barbarian':'barbaric',
-'weroance':'werowance', werowanc^':'werowance',
+'weroance':'werowance', 'werowanc^':'werowance',
 'forraine':'foreign',
 'ralegh':'raleigh', 'rawleigh':'raleigh', 'raligh':'raleigh',  'rawley':'raleigh',
 'elizabetz':'elizabeth',
