@@ -740,7 +740,6 @@
 'diuell':'devil', 'diuel':'devil',
 'vnsanctified':'unsanctified',
 'turkes':'turks',
-"eur'y":"every",
 'soueraigne':'sovereign', 'soueraign':'sovereign',
 'diuine':'divine',
 'praier':'prayer',
