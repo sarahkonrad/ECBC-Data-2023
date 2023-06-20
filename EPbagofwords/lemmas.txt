@@ -1301,7 +1301,7 @@
 'izabella':'isabella',
 'harriot':'hariot',
 'm^riam':'miriam',
-'ratcliff':'ratcliffe', 'ratliffe':'ratcliffe'
+'ratcliff':'ratcliffe', 'ratliffe':'ratcliffe',
 'skrivener':'scrivener',
 'chicohominie':'chickahominy',
 'tomahawkes':'tomahawks',
