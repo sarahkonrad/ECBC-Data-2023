@@ -691,7 +691,6 @@
 'infortunate':'unfortunate',
 'forsooke':'forsook',
 'paradice':'paradise',
-'lier':'liar', 'lye':'lie', 'lyer':'liar', **NOTE: REVIEW IN CONTEXT OF HOMONYM TO DETERMINE IF LEMMATIZATION IS VALID**
 'couetous':'covetous', 'covetovs':'covetous', 'couetovs':'covetous',
 'couetousness':'covetousness', 'covetovsness':'covetousness', 'couetovsness':'covetousness',
 'reuenge':'revenge',
