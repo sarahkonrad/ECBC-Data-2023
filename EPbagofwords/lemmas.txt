@@ -707,7 +707,7 @@
 'prouoke':'provoke',
 'canoa':'canoe', 'canowe':'canoe', 'canowes':'canoe',
 'chicohominie':'chickahominy',
-'trafficke':'traffic'
+'trafficke':'traffic',
 'tomahawkes':'tomahawks',
 'tossantessars':'tassantassas',
 'turkies':'turkeys', 'turkies':'turkeys', 'turckie':'turkey',
@@ -808,7 +808,7 @@
 'ma^ies':'mary',
 '^^e':'the',
 'thy^tir^':'thyatira',
-'cou^e':'course'.
+'cou^e':'course',
 '^^ience':'science',
 '^irst':'first',
 'm^^':'may',
@@ -897,7 +897,7 @@
 'benef^^':'benefit',
 '^allow':'fallow',
 '^either':'neither',
-'pro^it':'profit'
+'pro^it':'profit',
 'he^rd':'heard',
 'farm^r':'farmer',
 'ha^e':'have',
