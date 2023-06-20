@@ -788,7 +788,7 @@
 'virgini^':'virginia',
 'jonah^':'jonah',
 '^hy':'thy',
-'^herefore','therefore',
+'^herefore':'therefore',
 'ps^l':'psalm',
 '^hou':'thou',
 'p^whatan':'powhatan', 'pewhakan':'powhatan', 'pewhatan':'powhatan',
