@@ -1154,7 +1154,7 @@
 'aboundant':'abundant', 'abovndant':'abundant',
 'iamaica':'jamaica',
 'paradice':'paradise',
-'virginea':'virginia', 'uirginia':'virginia'
+'virginea':'virginia', 'uirginia':'virginia',
 'arsahattocke':'arrohattoc',
 'councell':'council',
 'turkies':'turkeys', 'turkies':'turkeys', 'turckie':'turkey',
