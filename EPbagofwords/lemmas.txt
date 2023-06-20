@@ -1322,7 +1322,7 @@
 'd^^gerous':'dangerous',
 'rasawrack':'rassawek',
 'ocanahonan':'ocanahowan', 'ocamahowan':'ocanahowan', 'ocanahonum':'ocanahowan',
-'chissiapiacke':'chesapeake', 'chesapeack':'chesapeake', 'chisapeack':'chesapeake'
+'chissiapiacke':'chesapeake', 'chesapeack':'chesapeake', 'chisapeack':'chesapeake',
 'carebyes':'caribs', 'carrebyes':'caribs',
 'arrowes':'arrows', 'arrowe':'arrow',
 'bloudthirsty':'bloodthirsty',
