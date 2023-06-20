@@ -1037,7 +1037,7 @@
 'deccive':'decieve',
 '^hat':'that',
 'fortun^':'fortune',
-'god^:'gods',
+'god^':'gods',
 'bar^':'bare',
 'sta^e':'state',
 'ass^ria':'assyria',
