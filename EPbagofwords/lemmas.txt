@@ -1167,7 +1167,7 @@
 'vnworthy':'unworthy', 'vnworthie':'unworthy', 'unworthie':'unworthy', 'vnvvorthy':'unworthy', 'vnvvorthie':'unworthy', 'vnuuorthie':'unworthy', 'vnuuorthy':'unworthy', 'unuuorthy':'unworthy', 'unuuorthie':'unworthy',
 'naturalls':'naturals',
 'inhabitantes':'inhabitants',
-'chiefe':'chief'',
+'chiefe':'chief',
 'ciuilitie':'civility',
 'civill':'civil',
 'straunge':'strange',
