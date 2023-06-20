@@ -1291,5 +1291,6 @@
 'uineyard':'vineyard',
 'merchandize':'merchandise',
 'catholike':'catholic', 'catholik':'catholic', 'catholique':'catholic', 'catholicism':'catholic', 'catholics':'catholic',
-'barbarous':'barbaric', 'barbarism':'barbaric', 'barbarians':'barbaric', 'barbarian':'barbaric'
+'barbarous':'barbaric', 'barbarism':'barbaric', 'barbarians':'barbaric', 'barbarian':'barbaric',
+'weroance':'werowance', werowanc^':'werowance'
 }
