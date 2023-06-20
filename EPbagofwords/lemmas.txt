@@ -814,7 +814,7 @@
 '^irst':'first',
 'm^^':'may',
 'fortun^':'fortune',
-'god^':'god's',
+'god^':'gods',
 'saboth':'sabbath',
 'cammandement':'commandment',
 's^lfe':'selfe',
