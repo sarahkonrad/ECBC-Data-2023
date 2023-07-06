@@ -1,0 +1,43 @@
+---
+title: "Code to read clustering tables"
+subtitle: "In format of 'tfidf pings' sheet"
+format: pdf
+---
+
+```{r load packages, message = F, warning = F}
+library(tidyverse)
+library(readr)
+library(stringr)
+```
+
+```{r get data}
+tfidfpings = read.csv("C:/Users/bqueu/Documents/R/Clustering in R/tfidf.pings.count...Sheet1.csv")
+```
+
+```{r separating comma values}
+tfidfpings1 = tfidfpings |>
+  select(High.tf.idf.scoring.texts, Duplicate.Texts..from.above.categories.) |>
+  mutate(High.tf.idf.scoring.texts = as.character(High.tf.idf.scoring.texts)) |>
+  separate_rows(High.tf.idf.scoring.texts, sep = ",\\s+") |>
+  separate_rows(Duplicate.Texts..from.above.categories., sep = ",\\s+") 
+
+tfidfpings1
+```
+
+```{r table to list}
+tfidfpings1_lists = tfidfpings1 |>
+  as.list()
+
+tfidfpings1_combined = append(tfidfpings1_lists[["High.tf.idf.scoring.texts"]], tfidfpings1_lists[["Duplicate.Texts..from.above.categories."]])
+```
+
+```{r count entries, message = F}
+tfidfpings_table = table(unlist(lapply(tfidfpings1_combined, unique))) |>
+  as.data.frame() |>
+  subset(Var1 != "") |>
+  group_by(Freq)
+
+tfidfpings_table[order(-tfidfpings_table$Freq), ] |>
+  write.csv(file = "indenture_freq_pings.csv", row.names = FALSE)
+```
+
