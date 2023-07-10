@@ -11,33 +11,56 @@ library(stringr)
 ```
 
 ```{r get data}
-tfidfpings = read.csv("C:/Users/bqueu/Documents/R/Clustering in R/tfidf.pings.count...Sheet1.csv")
+tfidfpings = read.csv("insert_csv_path_here")
 ```
 
 ```{r separating comma values}
 tfidfpings1 = tfidfpings |>
-  select(High.tf.idf.scoring.texts, Duplicate.Texts..from.above.categories.) |>
+  select(High.tf.idf.scoring.texts) |>
   mutate(High.tf.idf.scoring.texts = as.character(High.tf.idf.scoring.texts)) |>
-  separate_rows(High.tf.idf.scoring.texts, sep = ",\\s+") |>
-  separate_rows(Duplicate.Texts..from.above.categories., sep = ",\\s+") 
+  # Select the relevant rows and mutate to a character variable to avoid problems.
+  separate_rows(High.tf.idf.scoring.texts, sep = ",\\s+")
+  # Separate using the ',' delimiter, allowing for spaces after ("\\s+")
+  # Do this separately with each row to avoid duplicate text ids.
 
 tfidfpings1
+
+tfidfpings2 = tfidfpings |>
+  select(Duplicate.Texts..from.above.categories.) |>
+  mutate(Duplicate.Texts..from.above.categories. = as.character(Duplicate.Texts..from.above.categories.)) |>
+  separate_rows(Duplicate.Texts..from.above.categories., sep = ",\\s+")
+
+tfidfpings2
 ```
 
 ```{r table to list}
 tfidfpings1_lists = tfidfpings1 |>
   as.list()
 
+tfidfpings2_lists = tfidfpings2 |>
+  as.list()
+
+# Turn both data frames into lists.
+
 tfidfpings1_combined = append(tfidfpings1_lists[["High.tf.idf.scoring.texts"]], tfidfpings1_lists[["Duplicate.Texts..from.above.categories."]])
+
+tfidfpings2_combined = append(tfidfpings2_lists[["High.tf.idf.scoring.texts"]], tfidfpings2_lists[["Duplicate.Texts..from.above.categories."]])
+
+tfidfpings_combined = append(tfidfpings1_combined, tfidfpings2_combined)
+
+# Append multiple times to combine into one list.
 ```
 
 ```{r count entries, message = F}
-tfidfpings_table = table(unlist(lapply(tfidfpings1_combined, unique))) |>
+tfidfpings_table = table(unlist(lapply(tfidfpings_combined, unique))) |>
+  # Count frequency of each listing
   as.data.frame() |>
+  # Turn back into data frame
   subset(Var1 != "") |>
+  # Eliminate spaces/empty entries
   group_by(Freq)
 
 tfidfpings_table[order(-tfidfpings_table$Freq), ] |>
-  write.csv(file = "indenture_freq_pings.csv", row.names = FALSE)
+  write.csv(file = "irish_freq_pings.csv", row.names = FALSE)
 ```
 
