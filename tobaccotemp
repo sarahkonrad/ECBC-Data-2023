@@ -27,8 +27,8 @@
         </div>
         <div class="topLeft">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates">{{pos}} in 1580-1599</p>
+                <h1>IRISH</h1>
+                <p class="dates">{{pos}} in 1590-1594</p>
             </div>
             <div class="container">
                 
@@ -71,8 +71,8 @@
 -->
         <div class="topMiddleL">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates"> {{pos}} in 1600-1607</p>
+                <h1>IRISH</h1>
+                <p class="dates"> {{pos}} in 1595-1599</p>
             </div>
             <div class="container">
 
@@ -113,8 +113,8 @@
 
         <div class="topMiddleR">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates"> {{pos}} in 1608-1617</p>
+                <h1>IRISH</h1>
+                <p class="dates"> {{pos}} in 1600-1604</p>
             </div>
             <div class="container">
 
@@ -156,8 +156,8 @@
 
         <div class="topRight">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates">{{pos}} in 1618-1624</p>
+                <h1>IRISH</h1>
+                <p class="dates">{{pos}} in 1605-1609</p>
             </div>
             <div class="container">
                 <div class="word">
@@ -196,8 +196,8 @@
 <!--<hr>>-->
         <div class="bottomLeft">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates"> {{pos}} in 1625-1634</p>
+                <h1>IRISH</h1>
+                <p class="dates"> {{pos}} in 1610-1614</p>
             </div>
             <div class="container">
 
@@ -237,8 +237,8 @@
 
         <div class="bottomMiddleL">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates">{{pos}} in 1635-1638</p>
+                <h1>IRISH</h1>
+                <p class="dates">{{pos}} in 1615-1619</p>
             </div>
             <div class="container">                
                 <div class="word">
@@ -276,8 +276,8 @@
 
         <div class="bottomMiddleR">
             <div class="head">
-                <h1>TOBACCO</h1>
-                <p class="dates">{{pos}} in 1639-1641</p>
+                <h1>IRISH</h1>
+                <p class="dates">{{pos}} in 1620-1622</p>
             </div>
             <div class="container">                
                 <div class="word">
