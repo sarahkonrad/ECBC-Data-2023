@@ -1,0 +1,55 @@
+---
+format: html
+---
+
+```{r load packages, message = F, echo = F}
+library(tidyverse)
+library(plotly)
+```
+
+```{r get data, message = F, echo = F, output = F}
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\N-gram_Uni-gram List--final version - Werowocomoco_people_place_Bigram.csv)")
+head(table)
+```
+
+```{r pivot table, echo = F}
+table_pivot = table |>
+  pivot_longer(
+    cols = -X,
+    names_to = "ngram",
+    values_to = "frequency"
+  )
+table_pivot$X = sub("_", "-", table_pivot$X)
+```
+
+```{r graph, warning = F, echo = F}
+p = table_pivot |>
+  filter(ngram %in% c("indian_commodity", "savage_people", "heathen_people", "wild_indian", "wild_savage", "good_savage", "savage_good", "slay_savage", "savage_slay", "take_indian")) |>
+  ggplot(aes(x = X, y = frequency, group = ngram, color = ngram)) +
+  geom_line(size = .75) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  # scale_color_manual(values = c("#ff3333", "#eded2c", "#d2d2d2", "#add2ad", "#d2d2d2", "#7cabd0", "#d2d2d2", "#d2d2d2", "#d2d2d2", "#de4ab9", "#c596df", "#b5d0de", "#d2d2d2", "#d2d2d2")) +
+  ylim(0, 30) +
+  # geom_vline(xintercept = 3, color = "red", size = 1, linetype = "longdash") +
+  # annotate("text", x = 4, y = 13, label = "King James I \n is coronated.", fontface = "italic", size = 3)
+  # annotate("rect", xmin = .3, xmax = 3, ymin = 0, ymax = 40, alpha = .25) +
+  # annotate("rect", xmin = 8, xmax = 9, ymin = 0, ymax = 40, alpha = .25) +
+  annotate("rect", xmin = 7.5, xmax = 8.5, ymin = 0, ymax = 30, fill = "red", alpha = .25) +
+  labs(
+    title = "Virginia People N-grams Over Time in Focused Corpus",
+    x = "Date", 
+    y = "N-gram Frequency",
+    color = "N-gram"
+  ) 
+
+ggplotly(p) |>
+  layout(annotations = 
+    list(x = 1.3, y = -.2, text = 
+         "* Values in '1625-1629' \n may be inflated due to \n unusually large corpus size.
+** N-grams are based \n primarily on the language \n surrounding Native people.", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="#4d4d4d", fontface = 'italic'))
+)
+```
