@@ -1,0 +1,57 @@
+---
+format: html
+---
+
+```{r load packages, message = F, echo = F}
+library(tidyverse)
+library(plotly)
+```
+
+```{r load data, echo = F, message = F, output = F}
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\whole corpus lexicon sheets - virginia 2.csv)")
+head(table)
+```
+
+```{r pivot table, echo = F, output = F}
+table_pivot = table |>
+  pivot_longer(
+    cols = -X,
+    names_to = "date",
+    values_to = "CSS"
+  )
+table_pivot$date = sub("X", "", table_pivot$date)
+table_pivot$date = sub('\\.$', '', table_pivot$date)
+table_pivot$date = sub('\\.', '-', table_pivot$date)
+table_pivot
+```
+
+```{r graph, warning = F, echo = F}
+p = table_pivot |>
+  ggplot(aes(x = date, y = CSS, group = X, color = X)) +
+  geom_line() +
+  ylim(-.5, .75) +
+  geom_vline(xintercept = 4, color = "red", size = 1, linetype = "longdash", alpha = .4) +
+  annotate("text", x = 2.5, y = .7, label = "The Virginia Company \n was founded in 1606.", fontface = "italic", size = 3) +
+  geom_vline(xintercept = 8, color = "red", size = 1, linetype = "longdash", alpha = .4) +
+  annotate("text", x = 6.5, y = .7, label = "The Virginia Company \n had its charter \n revoked in 1624.", fontface = "italic", size = 3) +
+  geom_point() +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_color_manual(values = c("#d5b4b4", "#cad5b4", "#b6d5b4", "#4bd891", "#d5cfb4", "#ff9900", "#000000")) +
+  labs(
+    x = "Date",
+    y = "Cosine Similarity Score",
+    title = "English Discourse Around Virginia Changed With Charters",
+    color = "Keyword"
+  )
+
+ggplotly(p) |>
+  layout(annotations = 
+    list(x = 1.175, y = -.2, text = 
+         "* Keywords and graph \n relate to the \n Virginia subcorpus.
+** Score measures \n similarity to 'virginia'.", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="#4d4d4d", fontface = 'italic'))
+)
+```
