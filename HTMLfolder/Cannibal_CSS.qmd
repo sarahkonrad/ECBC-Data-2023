@@ -1,0 +1,58 @@
+---
+format: html
+---
+
+```{r load packages, message = F, echo = F}
+library(tidyverse)
+library(plotly)
+```
+
+```{r load data, echo = F, message = F, output = F}
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\whole corpus lexicon sheets - cannibal.csv)")
+head(table)
+```
+
+```{r pivot table, echo = F, output = F}
+table_pivot = table |>
+  pivot_longer(
+    cols = -X,
+    names_to = "date",
+    values_to = "CSS"
+  )
+table_pivot$date = sub("X", "", table_pivot$date)
+table_pivot$date = sub('\\.$', '', table_pivot$date)
+table_pivot$date = sub('\\.', '-', table_pivot$date)
+table_pivot
+```
+
+```{r graph, warning = F, echo = F}
+p = table_pivot |>
+  filter(X != "arawak") |>
+  ggplot(aes(x = date, y = CSS, group = X, color = X)) +
+  geom_line() +
+  ylim(0, .8) +
+  geom_vline(xintercept = 3, color = "red", size = 1, linetype = "longdash", alpha = .4) +
+  annotate("text", x = 4.25, y = .7, label = "English translation of \n \"On Cannibals\" was \n published in 1603.", fontface = "italic", size = 3) +
+  geom_point() +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_color_manual(values = c("#d5b4b4", "#000000", "#b6d5b4", "#4bd891", "#ff9900", "#d5cfb4")) +
+  labs(
+    x = "Date",
+    y = "Cosine Similarity Score",
+    title = "English Discourse Around Cannibalism Was Impacted By Publications",
+    color = "Keyword"
+  )
+
+ggplotly(p) |>
+  layout(annotations = 
+    list(x = 1.2, y = -.215, text = 
+         "* Keywords and graph \n relate to the entire corpus.
+** Michel de Montagne \n published \"On Cannibals\", \n an essay based on \n cultural relativism, \n in French in 1580.
+*** Score measures \n similarity to 'cannibal'.
+† 'Arawak' was taken \n out of this graph \n because it had no \n Cosine Similarity, and \n 'Arawacas' is a close \n Spanish translation.", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=11, color="#4d4d4d", fontface = 'italic'))
+)
+```
