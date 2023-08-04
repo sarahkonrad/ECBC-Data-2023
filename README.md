@@ -56,7 +56,7 @@ Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all 
 * *tf-idf.py* generates a table of TF-IDF scores using vocab from given base text
 
 # parts of speech (folder) 
-# *All of this code was adapted from the 2022 ECBC cohort for our purposes. Primary authorship belongs to them, not us* 
+ *All of this code was adapted from the 2022 ECBC cohort for our purposes. Primary authorship belongs to them, not us* 
 * *cleanTextPOS.ipynb* parses XML files and extracts the word and its POS tag, cleans text by lemmatizing, standardizing, and removing stop words
 * *getData.ipynb* extracts 10 words surrounding given key words in all instances in the text, gives json file with the top 10 of each specified part of speech surrounding the keyword
 
