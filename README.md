@@ -33,4 +33,41 @@ Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all 
 # Text Date Ranges (folder) 
 * .txt files labeled by the date ranges they cover, includes all TCP ids in the relevant range
 
+# VEP-Pipeline (folder)
+# *All of this code was written by the Visualizing English Print (VEP) Project that is a collaboration between the University of Wisconsin-Madison, the Folger Shakespeare Library, and the University of Strathclyde. We have appended the necessary licenses for use.*
+* *charactercleaner.py* pre-processes the raw XML files, removing structural garbage and some special characters from texts and inputting ASCII carets into transcription omissions, MUST BE RUN FROM THE COMMAND LINE
+* *conversiondict.py* necessary companion to charactercleaner.py that is used to remove and replace structural garbage & special characters
+# General Code 
+* *bodyExtraction.py* removes all <body> tagged text from XML files, did not end up being used in our project after we switched to EP instead of EEBO files, though useful for understanding BeautifulSoup
+* *list_csv.py* turns a given list into a CSV
+* *move.ipynb* used to copy over and move specified files around the Duke Compute Cluster
+
+# Heatmaps 
+* *enslaved african heatmaps* contains all PNGs of heatmaps for vocab related to enslaved Africans overtime and in their focused subcorpus
+* *indentured heatmaps* contains all PNGs of heatmaps for vocab related to indentured child labor/indentured labor overtime and in their focused subcorpus
+* *irish heatmaps* contains all PNGs of heatmaps for vocab related to the Irish overtime and in their focused subcorpus
+* *powhatan heatmaps* contains all PNGs of heatmaps for vocab related to the Powhatan overtime and in their focused subcorpus
+* *spanish heatmaps* contains all PNGs of heatmaps for vocab related to the Spanish overtime and in their focused subcorpus
+* *spiritual profit heatmaps* contains all PNGs of heatmaps for the vocabulary of spiritual profit overtime and its its focused (Virginia subcorpus)
+* *virginia heatmaps* contains all PNGs of heatmaps vocab related to Virginia overtime in its focused subcorpus
+
+# ngrams & tfidf (folder)
+* *ngrams.ipynb* generates and extracts bigrams and trigrams from specified texts
+* *tf-idf.py* generates a table of TF-IDF scores using vocab from given base text
+
+# parts of speech (folder) 
+# *All of this code was adapted from the 2022 ECBC cohort for our purposes. Primary authorship belongs to them, not us* 
+* *cleanTextPOS.ipynb* parses XML files and extracts the word and its POS tag, cleans text by lemmatizing, standardizing, and removing stop words
+* *getData.ipynb* extracts 10 words surrounding given key words in all instances in the text, gives json file with the top 10 of each specified part of speech surrounding the keyword
+
+# word2vec (folder) 
+* *overtime.ipynb* tracks cosine similarity overtime, tracks euclidean distance overtime, functionality for checking instances of a word in all texts over time
+* *regionalword2vec.ipynb* groups given TCP ids in subcorpora into their date ranges to create word2vec models, generates cosine similarity overtime for regional corpora
+* *wordembed.ipynb* generates heatmaps given a specified lexicon
+
+
+
+
+
+
 
