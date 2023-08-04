@@ -34,7 +34,7 @@ Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all 
 * .txt files labeled by the date ranges they cover, includes all TCP ids in the relevant range
 
 # VEP-Pipeline (folder)
-# *All of the code in this folder was written by the Visualizing English Print (VEP) Project that is a collaboration between the University of Wisconsin-Madison, the Folger Shakespeare Library, and the University of Strathclyde. We have appended the necessary licenses for use.*
+ *All of the code in this folder was written by the Visualizing English Print (VEP) Project that is a collaboration between the University of Wisconsin-Madison, the Folger Shakespeare Library, and the University of Strathclyde. We have appended the necessary licenses for use.*
 * *charactercleaner.py* pre-processes the raw XML files, removing structural garbage and some special characters from texts and inputting ASCII carets into transcription omissions, MUST BE RUN FROM THE COMMAND LINE
 * *conversiondict.py* necessary companion to charactercleaner.py that is used to remove and replace structural garbage & special characters
 # General Code 
