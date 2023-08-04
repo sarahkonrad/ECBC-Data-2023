@@ -1,0 +1,12 @@
+name: ecbc2023_rshiny
+title:
+username: datap2023ecbc
+account: datap2023ecbc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9512399
+bundleId: 7532626
+url: https://datap2023ecbc.shinyapps.io/ecbc2023_rshiny/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
