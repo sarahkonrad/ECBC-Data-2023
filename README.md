@@ -4,6 +4,7 @@ Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all 
 We combine the power of computational linguistics and close-reading techniques to evaluate the discourse surrounding 17th century English colonization and how it viewed different groups of people—its colonial rivals, the Indigenous nations it invaded, the Irish it subjugated, and the indentured children and enslaved Africans it shipped to the New World—in terms of profit, both economic and spiritual. With a specific focus on the Virginia Company, we analyze how the company focused on turning a "profit of souls" when it continuously failed to turn a commercial profit by preying on anxieties surrounding the spread of Catholicism, and how the larger umbrella of English colonization viewed the people it exploited in the years 1590-1639. Our work is built on prior years of Data+ and Bass Connections cohorts at Duke.
 
 View our R Shiny Web App Here: https://datap2023ecbc.shinyapps.io/ecbc2023_rshiny/
+
 View our website and poster here: https://sites.duke.edu/ethicalconsumption/
 
 # 2022 relevant files (folder) 
