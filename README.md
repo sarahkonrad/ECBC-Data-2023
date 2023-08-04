@@ -22,4 +22,15 @@ Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all 
 * contains all PNGs used on the R Shiny web app created by our POS code and Word2Vec models
 
 # POS Visualizations (folder) 
-* 
+* contains POS_Visualizations, a folder full of all of the PNGs for our part of speech tagging results
+
+# Text Classification (folder)
+* *kmeans.ipynb* code to do kmeans clustering on cleaned texts, visualize PCA clusters
+* *lda_topics.ipynb* lda topic modeling code for cleaned texts given specified n number of topics, TF-IDF vectorization or plain BOW processed texts
+* *supervised.ipynb* supervised text clustering based off of metadata tags taken from the EP spreadsheet to specify region
+* *counting text entries.qmd* used to filter TF-IDF results by # of relevant words hit inside a text for a given subject
+
+# Text Date Ranges (folder) 
+* .txt files labeled by the date ranges they cover, includes all TCP ids in the relevant range
+
+
