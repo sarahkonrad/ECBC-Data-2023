@@ -1,7 +1,7 @@
-# ECBC-Data-2023
-Ethical Consumption Before Capitalism, Data+ 2023
-
+# Ethical Cosumption Before Capitalism Data+ 2023
 Hello, we are the ECBC Data+ 2023 Cohort! In this repository, you will find all relevant code that was used to conduct our analysis this summer. 
+
+We combine the power of computational linguistics and close-reading techniques to evaluate the discourse surrounding 17th century English colonization and how it viewed different groups of people—its colonial rivals, the Indigenous nations it invaded, the Irish it subjugated, and the indentured children and enslaved Africans it shipped to the New World—in terms of profit, both economic and spiritual. With a specific focus on the Virginia Company, we analyze how the company focused on turning a "profit of souls" when it continuously failed to turn a commercial profit by preying on anxieties surrounding the spread of Catholicism, and how the larger umbrella of English colonization viewed the people it exploited in the years 1590-1639. Our work is built on prior years of Data+ and Bass Connections cohorts at Duke.
 
 # 2022 relevant files (folder) 
 * *replace.ipynb* standardizes and lemmatizes files using provided .txt file dictionaries. We ended up not using all of this code, though it provided some useful functionality for our lemmatization code
