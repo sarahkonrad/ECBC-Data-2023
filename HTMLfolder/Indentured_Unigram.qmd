@@ -1,0 +1,51 @@
+---
+format: html
+---
+
+```{r load packages, message = F, echo = F}
+library(tidyverse)
+library(plotly)
+```
+
+```{r get data, message = F, echo = F, output = F}
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\N-gram_Uni-gram List--final version - Indentured_Unigram.csv)")
+head(table)
+```
+
+```{r pivot table, echo = F}
+table_pivot = table |>
+  pivot_longer(
+    cols = -X,
+    names_to = "ngram",
+    values_to = "frequency"
+  )
+table_pivot$X = sub("_", "-", table_pivot$X)
+```
+
+```{r graph, warning = F, echo = F}
+p = table_pivot |>
+  filter(ngram != "aprenticeship") |>
+  ggplot(aes(x = X, y = frequency, group = ngram, color = ngram)) +
+  geom_line(size = .75) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_color_manual(values = c("#c9c6d2", "#33ff77", "#eaadbd", "#b25000", "#ffedb3", "#60dfbd")) +
+  # ylim(0, 100) +
+  labs(
+    title = "Indentured Unigrams Over Time",
+    x = "Date", 
+    y = "Unigram Frequency",
+    color = "Unigram"
+  ) 
+
+ggplotly(p) |>
+  layout(annotations = 
+    list(x = 1.225, y = -.1, text = 
+         "* Unigrams related to \n the Spanish, lower \n frequencies selected.
+** Unigram results in \n Spanish subcorpus
+*** For a better view \n of the data, try \n scaling the y axis to \n a smaller value.", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=12, color="#4d4d4d", fontface = 'italic'))
+)
+```
