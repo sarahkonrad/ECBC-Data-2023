@@ -8,7 +8,7 @@ library(plotly)
 ```
 
 ```{r load data, echo = F, message = F, output = F}
-table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\subcorpus sheets - servant 1.csv)")
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\subcorpus sheets - servant 2.csv)")
 head(table)
 ```
 
@@ -27,15 +27,15 @@ table_pivot
 
 ```{r graph, warning = F, echo = F}
 p = table_pivot |>
-  filter(X != "servant") |>
+  filter(X != "loose_person") |>
   ggplot(aes(x = date, y = CSS, group = X, color = X)) +
   geom_line() +
-  ylim(-.2, .8) +
-    annotate("rect", xmin = 1.25, xmax = 1.75, ymin = -.2, ymax = .8, alpha = .4, fill = "red") +
+  ylim(-.2, .7) +
+    annotate("rect", xmin = 1.25, xmax = 1.75, ymin = -.2, ymax = .7, alpha = .4, fill = "red") +
   geom_point() +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
-  scale_color_manual(values = c("#d5b4b4", "#cad5b4", "#b6d5b4", "#d5cfb4", "#000000", "#ff9900", "#4bd891", "#cab4d5", "#b4d1d5")) +
+  scale_color_manual(values = c("#ff9900", "#b6d5b4", "#d5cfb4", "#000000", "#d5b4b4", "#cab4d5", "#4bd891")) +
   labs(
     x = "Date",
     y = "Cosine Similarity Score",
@@ -45,8 +45,8 @@ p = table_pivot |>
 
 ggplotly(p) |>
   layout(annotations = 
-    list(x = 1.22, y = -.16, text = 
-         "* Keywords and graph \n relate to the Indentured corpus.
+    list(x = 1.2, y = -.16, text = 
+         "* Keywords and graph relate \n to the Indentured corpus.
 ** Score measures \n similarity to 'indenture'.
 † WARNING: 1595-1599 \n data not displayed; \n no texts in subcorpus.", 
       showarrow = F, xref='paper', yref='paper', 
