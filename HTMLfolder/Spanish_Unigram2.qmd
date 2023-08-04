@@ -1,0 +1,54 @@
+---
+format: html
+---
+
+```{r load packages, message = F, echo = F}
+library(tidyverse)
+library(plotly)
+```
+
+```{r get data, message = F, echo = F, output = F}
+table = read.csv(r"(C:\Users\bqueu\Documents\R\ECBC Graphs\N-gram_Uni-gram List--final version - Spanish_Unigram.csv)")
+head(table)
+```
+
+```{r pivot table, echo = F}
+table_pivot = table |>
+  pivot_longer(
+    cols = -X,
+    names_to = "ngram",
+    values_to = "frequency"
+  )
+table_pivot$X = sub("_", "-", table_pivot$X)
+```
+
+```{r graph, warning = F, echo = F}
+p = table_pivot |>
+  filter(ngram %in% c("inquisition", "armada", "infanta", "peru", "drake", "dorado", "mexico")) |>
+  ggplot(aes(x = X, y = frequency, group = ngram, color = ngram)) +
+  geom_line(size = .75) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) +
+  scale_color_manual(values = c("#c9c6d2", "#ffedb3", "#eaadbd", "#b25000", "#33ff77", "#b6d5b4", "#000000")) +
+  ylim(0, 750) +
+  geom_vline(xintercept = 3, color = "red", size = 1, linetype = "longdash", alpha = .4) +
+  annotate("text", x = 2, y = 700, label = "King James I \n is coronated.", fontface = "italic", size = 3) +
+  geom_vline(xintercept = 8, color = "red", size = 1, linetype = "longdash", alpha = .4) +
+  annotate("text", x = 7, y = 700, label = "King Charles I \n is coronated.", fontface = "italic", size = 3) +
+  labs(
+    title = "English Sentiments Towards the Spanish Changed with Different Reigns",
+    x = "Date", 
+    y = "Unigram Frequency",
+    color = "Unigram"
+  ) 
+
+ggplotly(p) |>
+  layout(annotations = 
+    list(x = 1.175, y = -.1, text = 
+         "* Unigrams related to \n the Spanish, lower \n frequencies selected.
+** Unigram results in \n Spanish subcorpus", 
+      showarrow = F, xref='paper', yref='paper', 
+      xanchor='right', yanchor='auto', xshift=0, yshift=0,
+      font=list(size=11, color="#4d4d4d", fontface = 'italic'))
+)
+```
